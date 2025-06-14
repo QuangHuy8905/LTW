@@ -1,0 +1,182 @@
+body {
+    background-color: #323232;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #444;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 15px;
+}
+
+.card-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-background .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 250px; /* ĐIỀU CHỈNH: Tăng padding-top để đẩy tên và icon xuống dưới */
+    box-sizing: border-box;
+}
+
+.card-image-container {
+    width: 180px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: 50px; /* Giữ nguyên vị trí ảnh đại diện */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: #444;
+    z-index: 2;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.card-info {
+    width: 100%;
+    margin-top: 0px;
+}
+
+.card-info h2 {
+    margin-top: 0;
+    margin-bottom: 30px; /* Giữ nguyên khoảng cách với icon */
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Giữ nguyên khoảng cách giữa các icon */
+    margin-top: 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    padding: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    opacity: 1;
+}
+
+.placeholder-card {
+    height: 400px;
+    background-color: rgba(85, 85, 85, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bbb;
+    font-size: 1.2em;
+    border-radius: 15px;
+    border: 2px dashed #777;
+    padding: 20px;
+    text-align: center;
+}

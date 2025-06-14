@@ -1,0 +1,388 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body {
+  padding-top: 50px;
+  background-color: #b4a9a9;
+}
+/* giao diện */
+.container {
+  display: flex;
+  background-color: #b8b4b4;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  margin: auto;
+  gap: 40px;
+}
+/* avatar */
+.profile-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* phần thông tin */
+.profile-text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-text h1 {
+  font-size: 56px;
+  font-weight: bold;
+  color: #f7eeee;
+  margin-bottom: 10px;
+}
+
+.profile-text h2 {
+  font-size: 32px;
+  font-weight: normal;
+  color: #fbf9f9;
+  margin-bottom: 30px;
+}
+/* icon liên kết */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons ion-icon {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+/* Hiệu ứng hover cho các icon mạng xã hội */
+.social-icons a:hover ion-icon {
+  transform: translateY(-3px);
+}
+
+.info-section {
+  max-width: 1100px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+/* phần thông tin cá nhân */
+.info-box {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+
+.iconbook {
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+}
+
+.info-box h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.info-box p {
+  font-size: 16px;
+  color: #555;
+  margin: 4px 0 0 0;
+}
+
+/* SỞ THÍCH */
+.hobby-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 25px auto;
+  text-align: center;
+
+}
+
+.hobby-section {
+  background-color: #b8b4b4;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.hobby-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  cursor: grab;
+  scroll-behavior: smooth;
+  max-width: 350px;
+  margin: auto;
+  user-select: none;
+}
+
+.hobby-scroll-container:active {
+  cursor: grabbing;
+}
+
+.hobby-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.hobby-scroll-container::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+
+.hobby-card {
+  flex: 0 0 300px;
+  background: #2c3e50;
+  border-radius: 15px;
+  padding: 15px;
+  color: white;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hobby-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.hobby-content h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hobby-content p {
+  font-size: 14px;
+}
+
+/* Skill */
+.skills-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgb(125, 9, 9);
+}
+
+/* Container kỹ năng */
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/* Box kỹ năng */
+.skill-box {
+  background-color: #1c1c1c;
+  border: 1px solid #b8a75b;
+  border-radius: 10px;
+  width: 30%;
+  min-width: 280px;
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover hiệu ứng */
+.skill-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #b8a75b;
+}
+
+/* Icon kỹ năng */
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Tên kỹ năng */
+.skill-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* kỹ năng ngôn ngữ */
+.skills-section {
+  background-color: #2b2b2b;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  font-size: 28px;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100px;
+  background-color: white;
+}
+
+.skill {
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
+.skill-name {
+  display: inline-block;
+  width: 200px;
+  font-size: 16px;
+}
+
+.progress-bar {
+  background-color: #444;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 20px;
+  background-color: white;
+  text-align: right;
+  padding-right: 5px;
+  font-size: 12px;
+  color: rgb(17, 16, 16);
+  line-height: 12px;
+}
+
+/* chứng chỉ - giải thưởng */
+.profile-box {
+  background-color: #fef4eb;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #d2e7c9;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.menu a:hover {
+  background-color: #bddfb2;
+}
+
+.box {
+  background-color: #e0dddd;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+/* cuối trang */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 30px 0 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.footer .note {
+  font-size: 14px;
+  color: #ccc;
+}
